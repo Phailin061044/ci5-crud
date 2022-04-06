@@ -36,9 +36,9 @@ $routes->get('/', 'Home::index');
 // add theses
 $routes->get('namelist', 'NamesCrud::index');
 $routes->get('addname', 'NamesCrud::create');
-$routes->get('submit-form', 'NamesCrud::store');
+$routes->post('submit-form', 'NamesCrud::store');
 $routes->get('editnames/(:num)', 'NamesCrud::singleUser/$1');
-$routes->get('update', 'NamesCrud::update');
+$routes->post('update', 'NamesCrud::update');
 $routes->get('delete/(:num)', 'NamesCrud::delete/$1');
 
 /*
