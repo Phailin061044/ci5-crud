@@ -6,7 +6,7 @@ class NamesCrud extends Controller {
        //Show name list
     public function index() {
         $NameModel = new NameModel();
-        $data['users'] = $NameModel->orderBy('id', 'DESC')->findAll();
+        $data['users'] = $NameModel->orderBy('id', 'ASC')->findAll();
         return view('namelist', $data);
     }
 
